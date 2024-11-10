@@ -1,14 +1,19 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+import Navbar from "./components/navbar/Navbar";
+import SecondaryNavbar from "./components/navbar/SecondaryNavbar";
+import "./index.css"
+
+import Footer from "./components/footer/Footer";
+import { Outlet } from "react-router-dom";
+
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* Add more routes as needed */}
-      </Routes>
-    </Router>
+    <div className="font">
+      <Navbar /> 
+      <SecondaryNavbar />
+      <Outlet></Outlet>
+    <Footer></Footer>
+    </div>
   );
 }
 
